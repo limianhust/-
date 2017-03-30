@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js" ></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    li{
+    list-style: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.nav{
+    width: 200px;
+    background: #c7171e;
+    margin: 5px 0 0 10px;
+}
+.nav .category{
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    border-bottom: 1px dotted #de272e;
+}
+.nav .cat-title{
+    color: #ffffff;
+}
+.nav .category .icon{
+    color: #ffffff;
+    float: right;
+}
+.nav .sub-ct{
+    position: absolute;
+    left: 200px;
+    top: 0;
+    display: none;
+    width: 210px;
+}
+.nav .category.hover .sub-ct{
+    display: flex;
+    border: 1px solid #cccccc;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.nav .category .sub-ct li{
+    margin: 10px 0;
+    width: 80px;
+    text-align: center;
+}
+.nav .category .sub-ct a{
+    color: #000;
+    font-size: 14px;
+}
+    </style>
+</head>
+<body>
+<div class="ct-nav">
+    <ul class="nav">
+        <li class="category">
+            <a href="" class="cat-title">珠宝玉器1</a>
+            <span class="icon">></span>
+            <ul class="sub-ct">
+                <li><a href="">翡翠1</a></li>
+                <li><a href="">玉石</a></li>
+                <li><a href="">宝石</a></li>
+                <li><a href="">水晶</a></li>
+                <li><a href="">玛瑙</a></li>
+                <li><a href="">珍珠</a></li>
+                <li><a href="">钻石</a></li>
+                <li><a href="">琥珀</a></li>
+                <li><a href="">和田</a></li>
+                <li><a href="">琥珀</a></li>
+            </ul>
+        </li>
+        <li class="category">
+            <a href="" class="cat-title">珠宝玉器2</a>
+            <span class="icon">></span>
+            <ul class="sub-ct">
+                <li><a href="">翡翠2</a></li>
+                <li><a href="">玉石</a></li>
+                <li><a href="">宝石</a></li>
+                <li><a href="">水晶</a></li>
+                <li><a href="">玛瑙</a></li>
+                <li><a href="">珍珠</a></li>
+            </ul>
+        </li>
+        <li class="category">
+            <a href="" class="cat-title">珠宝玉器3</a>
+            <span class="icon">></span>
+            <ul class="sub-ct">
+                <li><a href="">翡翠3</a></li>
+                <li><a href="">玉石</a></li>
+                <li><a href="">宝石</a></li>
+                <li><a href="">水晶</a></li>
+            </ul>
+        </li>
+        <li class="category">
+            <a href="" class="cat-title">珠宝玉器4</a>
+            <span class="icon">></span>
+            <ul class="sub-ct">
+                <li><a href="">翡翠4</a></li>
+                <li><a href="">玉石</a></li>
+                <li><a href="">宝石</a></li>
+                <li><a href="">水晶</a></li>
+                <li><a href="">玛瑙</a></li>
+                <li><a href="">珍珠</a></li>
+            </ul>
+        </li>
+        <li class="category">
+            <a href="" class="cat-title">珠宝玉器5</a>
+            <span class="icon">></span>
+            <ul class="sub-ct">
+                <li><a href="">翡翠5</a></li>
+                <li><a href="">玉石</a></li>
+                <li><a href="">宝石</a></li>
+                <li><a href="">水晶</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+
+        //$('ul.nav .sub-ct').hide()
+//    var ulList = $('ul.nav>li')
+//    $.each(ulList,function (key,value) {
+//        //console.log(value)
+//        $(value).bind('mouseover',function (e) {
+//            var $tar = $(this)
+//            //console.log($tar.children().text())
+//            $tar.children('.sub-ct').show()
+//            $.each($tar.siblings(),function (key,value) {
+//                console.log($(value).children()[2])
+//                $(value).children().eq(2).hide()
+//            })
+//
+//        }).bind('mouseleave',function () {
+//
+//        })
+//    })
+        $('ul.nav>li').on('mouseover',function () {
+            $(this).addClass('hover')
+            console.log(2)
+        }).on('mouseleave',function () {
+            $(this).removeClass('hover')
+        })
+</script>
+</body>
+</html>
